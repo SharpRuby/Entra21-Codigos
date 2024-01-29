@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Clientes</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+ 
+  h1 {
+    color: #333;
+  }
+ 
+  button {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+ 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+ 
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+ 
+  th {
+    background-color: #007bff;
+    color: #fff;
+  }
+ 
+  button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+ 
+  button:hover {
+    background-color: #c82333;
+  }
+ 
+  button.edit {
+    background-color: #ffc107;
+    color: #000;
+  }
+ 
+  button.edit:hover {
+    background-color: #e0a800;
+  }
+</style>
+ 
+<body>
+  <h1>Gestão de Clientes</h1>
+  <button onclick="loadClients()">Pesquisar Clientes</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="clientTableBody"></tbody>
+  </table>
+ 
+  <button onclick="redirectToCadastro()">Ir para Cadastro</button>
+ 
+  <script>
+    var data;
+ 
+    async function loadClients() {
+      const response = await fetch('http://localhost:3000/clientes');
+      data = await response.json();
+      const tableBody = document.getElementById('clientTableBody');
+      tableBody.innerHTML = ''; // Limpa o conteúdo anterior
+ 
+      data.forEach(cliente => {
+        const row = document.createElement('tr');
+        ['id', 'nome', 'email', 'telefone'].forEach(key => {
+          const cell = document.createElement('td');
+          cell.textContent = cliente[key];
+          row.appendChild(cell);
+        });
+ 
+        const actionCell = document.createElement('td');
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Excluir';
+        deleteButton.onclick = () => deleteClient(cliente.id);
+        actionCell.appendChild(deleteButton);
+ 
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Editar';
+        editButton.onclick = () => editClient(cliente.id);
+        actionCell.appendChild(editButton);
+ 
+        row.appendChild(actionCell);
+ 
+        tableBody.appendChild(row);
+      });
+    }
+ 
+    function redirectToCadastro() {
+      window.location.href = 'Cadastro.html';
+    }
+ 
+    async function deleteClient(clientId) {
+      // Envia uma requisição DELETE para o servidor
+      const response = await fetch(`http://localhost:3000/clientes/${clientId}`, {
+        method: 'DELETE'
+      });
+ 
+      alert('Registro excluído com sucesso.')
+    }
+ 
+    async function editClient(clientId) {
+      const index = data.findIndex(cliente => cliente.id === clientId);
+ 
+      if (index !== -1) {
+        const newName = prompt('Digite o novo nome:', data[index].nome);
+        const newEmail = prompt('Digite o novo email:', data[index].email);
+        const newTelefone = prompt('Digite o novo telefone:', data[index].telefone);
+ 
+        data[index].nome = newName || data[index].nome;
+        data[index].email = newEmail || data[index].email;
+        data[index].telefone = newTelefone || data[index].telefone;
+ 
+        await fetch(`http://localhost:3000/clientes/${clientId}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data[index])
+        });
+        alert('Informações salvas com sucesso');
+ 
+      }
+    }
+  </script>
+</body>
+ 
+</html>

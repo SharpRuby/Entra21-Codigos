@@ -1,0 +1,134 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap'); */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Krona One', sans-serif; */
+}
+
+body {
+    background-color: black;
+}
+
+.Título {
+    color: white;
+    word-spacing: 3px;
+}
+
+.Texto {
+    color: white;
+    font-size: 20px;
+}
+
+.Imagem {
+    width: 350px; 
+    height: 400px; 
+    position: absolute; 
+    top: 10px; 
+    left: 475px; 
+}
+
+.Link1 {
+    color: black;
+    text-decoration: none;
+}
+
+.Link2 {
+    color: black;
+    text-decoration: none;
+}
+
+.Instagram {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 75px;
+    background-color: #22d3fd;
+    position: absolute; 
+    top: 275px; 
+    border-radius: 20px;
+}
+
+.Github {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 75px;
+    background-color: #22d3fd;
+    position: absolute; 
+    top: 275px; 
+    left: 225px;
+    border-radius: 20px;
+}
+/* Mobile Samsung Galaxy 20S Ultra */
+@media (max-width: 412px) and (max-height: 915px) {
+    
+    * {
+        font-family: 'Roboto', sans-serif;
+        /* font-family: 'Krona One', sans-serif; */
+    }
+    
+    body {
+        background-color: black;
+    }
+    
+    .Título {
+        text-align: center;
+        color: white;
+        font-size: 25px;
+    }
+    
+    .Texto {
+        position: absolute;
+        text-align: center;
+        top: 15%;
+        color: white;
+        font-size: 22px;
+    }
+    
+    .Imagem {
+        display: block;
+        left: 30px;
+        top: 53%;
+    }
+    
+    .Link1 {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .Link2 {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .Instagram {
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 185px;
+        height: 75px;
+        background-color: #22d3fd;
+        position: absolute; 
+        top: 350px; 
+        border-radius: 20px;
+    }
+    
+    .Github {
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 185px;
+        height: 75px;
+        background-color: #22d3fd;
+        position: absolute; 
+        top: 350px; 
+        left: 215px;
+        border-radius: 20px;
+    }
+}

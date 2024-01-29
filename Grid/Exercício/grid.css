@@ -1,0 +1,19 @@
+.Grid {
+    display: grid; 
+    gap: 25px;
+    justify-content: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.Item1 {
+    grid-column: 1 / 3;
+}
+
+.Item4 {
+    grid-row: 2 / 4;
+    grid-column: 2 / 2;
+}

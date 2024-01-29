@@ -1,0 +1,64 @@
+body {
+    background: url(Background.jpg);
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+}
+
+.Completado {
+    text-decoration: line-through;
+    color: greenyellow;
+}
+
+.error {
+    color: rgb(134, 2, 2);
+    font-size: 35px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+input {
+    position: absolute;
+    top: 10%;
+    left: 41%;
+    text-align: center;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 15px;
+    width: 350px;
+    height: 100px;
+}
+
+::placeholder {
+    color: black; 
+}
+
+#addTaskButton {
+    position: absolute;
+    top: 14%;
+    left: 45%; 
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: greenyellow;
+}
+
+#Botão {
+    position: absolute;
+    /* top: 14%; */
+    left: 120%; 
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: rgb(172, 23, 23);
+}
+
+#taskList {
+    position: absolute;
+    left: 47%; 
+    top: 25%;
+    text-align: center;
+    font-size: 25px;
+}

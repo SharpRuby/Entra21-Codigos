@@ -1,0 +1,80 @@
+body {
+    background: rgb(145, 140, 138);
+    background: linear-gradient(90deg, rgba(145, 140, 138, 1) 10%, rgba(145, 140, 138, 1) 90%);
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.QuantidadePessoas {
+    position: absolute;
+    left: 36%;
+    top: 8%;
+}
+
+.QuantidadePessoasInput {
+    border: 2px solid black;
+    background-color: gainsboro;
+    position: absolute;
+    left: 645px;
+    top: 12%;
+}
+
+.GramasPessoas {
+    position: absolute;
+    left: 53.5%;
+    top: 8%;
+}
+
+.GramasPessoasInput {
+    border: 2px solid black;
+    background-color: gainsboro;
+    position: absolute;
+    left: 945px;
+    top: 12%;
+}
+
+.TipoCarne {
+    position: absolute;
+    left: 36%;
+    top: 15%;
+}
+
+.TipoCarneID {
+    position: absolute;
+    left: 36%;
+    top: 19%;
+}
+
+.PreçoPorKg {
+    position: absolute;
+    left: 53.5%;
+    top: 15%;
+}
+
+.PreçoPorKgInput {
+    border: 2px solid black;
+    background-color: gainsboro;
+    position: absolute;
+    left: 52%;
+    top: 19%;
+}
+
+.BotãoCalcular {
+    position: absolute;
+    left: 45.5%;
+    top: 19%;
+}
+
+.Resultado {
+    position: absolute;
+    left: 45.5%;
+    top: 22%;
+}
+
+.ResultadoInput {
+    position: absolute;
+    left: 35%; 
+    top: 26%;
+}

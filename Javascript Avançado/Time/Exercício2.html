@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Exercício2.js"></script>
+    <title>Exercício2</title>
+</head>
+
+<body>
+
+    <h1>SetTimeOut</h1>
+    <p>Digite um valor inicial:</p>
+    <input type="number" id="valorInicial">
+    <button onclick="iniciarContador()">Iniciar Contador</button>
+    <p id="resultado"></p>
+
+    <script>
+        function iniciarContador() {
+            var valorInicial = parseFloat(document.getElementById('valorInicial').value); 
+            var contador = 0; 
+            var interval = setInterval(function() {
+                if (contador < 3) {
+                    valorInicial += 100; 
+                    contador++; 
+                } else {
+                    clearInterval(interval); 
+                document.getElementById('resultado').textContent = "Resultado final: " + valorInicial; } } ,1000); 
+            }
+    </script>
+
+</body>
+
+</html>

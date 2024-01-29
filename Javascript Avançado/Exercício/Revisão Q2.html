@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revisão Q2</title>
+  <link rel="stylesheet" href="Revisão Q2.css">
+  
+</head>
+<body>
+
+  <p class="QuantidadePessoas" for="quantidadePessoas">Quantidade de Pessoas</p>
+  <input class="QuantidadePessoasInput"type="number" id="quantidadePessoas" placeholder="Informe a quantidade de pessoas" style="width: 215px;">
+
+  <p class="GramasPessoas" for="gramasPorPessoa">Gramas por Pessoa</p>
+  <input class="GramasPessoasInput" type="number" id="gramasPorPessoa" placeholder="Informe a quantidade de gramas por pessoa" style="width: 280px;">
+
+  <p class="TipoCarne" for="tipoCarne">Tipo de Carne</p>
+  <select class="TipoCarneID" id="tipoCarne">
+    <option value="bovina">Carne Bovina</option>
+    <option value="suina">Carne Suína</option>
+    <option value="frango">Frango</option>
+  </select>
+
+  <p class="PreçoPorKg" for="precoPorKg">Preço por Kg da Carne</p>
+  <input class="PreçoPorKgInput" type="number" id="precoPorKg" placeholder="Informe o preço por kg da carne" style="width: 210px";>
+
+  <button class="BotãoCalcular" onclick="calcularChurrasco()">Calcular</button>
+
+  <p class="Resultado" for="resultado"> Resultado </p>
+  <input class="ResultadoInput" type="text" id="resultado" readonly style="width: 450px;">
+
+  <script>
+    function calcularChurrasco() {
+      var quantidadePessoas = parseInt(document.getElementById('quantidadePessoas').value);
+      var gramasPorPessoa = parseInt(document.getElementById('gramasPorPessoa').value);
+      var tipoCarne = document.getElementById('tipoCarne').value;
+      var precoPorKg = parseFloat(document.getElementById('precoPorKg').value);
+
+      var quantidadeTotalGramas = quantidadePessoas * gramasPorPessoa;
+      var valorTotal = (quantidadeTotalGramas / 1000) * precoPorKg;
+
+      if (quantidadePessoas > 10) {
+        valorTotal *= 1.1;
+      }
+
+      document.getElementById('resultado').value = "Você precisará de aproximadamente " + quantidadeTotalGramas + "g de " + tipoCarne + ". O custo total é R$ " + valorTotal.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+Água, Limão, Gelo, Áçúcar, Copo
+
+Adicione um recipiente (Copo), sirva-o até a quantidade desejada de água.
+Após adicionar a quantidade escolhida de água no recipiente, adicione gotas de limão na água.
+Com a mistura de água e limão feita, ponha a quantia desejada preferível de açúcar. 
+Ao fim, adicione uma quantidade de dois cubos de gelo no recipiente e em seguida, sirva-se.
+
+
+
+Notas
+
+Adicione suas notas;
+Ex: 10, 10, 10. 
+Calcular a média de acordo com os resultados obtidos; 
+Notas / 3;  
+

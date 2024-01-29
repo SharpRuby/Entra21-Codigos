@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+body {
+    background-image: url(Fundo.png);
+    background-repeat: no-repeat;
+    background-size: 200%;
+
+    color: white; 
+}
+
+.Título1 {
+    text-align: center;
+    background-color: #2e1a0f;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 0px 1px 20px 5px black;
+}
+
+.Titulo2 {
+    background-color: #f6cd3f;
+    width: 150px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.Titulo3 {
+    text-align: center;
+    background-color: #2e1a0f;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 0px 1px 20px 5px black;
+}
+
+.Titulo4 {
+    text-align: center;
+    background-color: #2e1a0f;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 0px 1px 20px 5px black;
+}
+
+.Subtitulo1 {
+    background-color: #f6cd3f;
+    width: 200px;
+    text-align: center;
+}
+
+.Subtitulo2 {
+    background-color: #f6cd3f;
+    width: 200px;
+    text-align: center;
+}
+
+.Subtitulo3 {
+    background-color: #f6cd3f;
+    width: 200px;
+    text-align: center;
+}
+
+.Subtitulo4 {
+    background-color: rgb(247, 190, 6);
+    width: 450px;
+    text-align: center;
+}
+
+.Subtitulo5 {
+    background-color: rgb(247, 190, 6);
+    width: 450px;
+    text-align: center;
+}
+
+.Video {    
+    display: block;
+    height: 500px;
+    width: 1000px;
+    margin: 0 auto;
+    border: 10px solid #2e1a0f;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 10px black;
+    filter: saturate(2);
+}
+
+.GPS {
+    display: block;
+    height: 500px;
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 10px black;
+}
+
+.Imagem {
+    height: 350px;
+    width: 550px;
+    display: flex;
+    position: absolute;
+    top: 85px;
+    right: 50px;
+    border: 10px solid #2e1a0f;
+    box-shadow: 0px 5px 10px 10px black;
+    border-radius: 15px;
+    filter: saturate(2);
+}
+
+.Link {
+    text-decoration: none;
+    color:rgb(247, 190, 6);
+}

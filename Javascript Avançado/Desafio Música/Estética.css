@@ -1,0 +1,100 @@
+body {
+    background: rgb(226, 29, 146);
+    background: linear-gradient(90deg, rgba(226, 29, 146, 1) 10%, rgba(56, 123, 96, 1) 40%, rgba(56, 123, 96, 1) 50%, rgba(56, 123, 96, 1) 60%, rgba(172, 11, 8, 1) 90%);
+}
+
+.T1 {
+    color: #e21d92;
+    text-shadow: black 1px 1px 5px;
+    text-decoration: underline;
+    position: absolute;
+    left: 550px;
+    top: 300px;
+}
+
+.T2 {
+    color: #446c5c;
+    text-shadow: black 1px 1px 5px;
+    text-decoration: underline;
+    position: absolute;
+    left: 790px;
+    top: 300px;
+}
+
+.T3 {
+    color: #ac0b08;
+    text-shadow: black 1px 1px 5px;
+    text-decoration: underline;
+    position: absolute;
+    left: 1175px;
+    top: 300px;
+}
+
+.TocarSom1 {
+    background-color: #e21d92;
+    border: 1px solid #e21d92;
+    position: absolute;
+    left: 430px;
+}
+
+.PausarSom1 {
+    background-color: #e21d92;
+    border: 1px solid #e21d92;
+    position: absolute;
+    left: 681px;
+}
+
+.TocarSom2 {
+    background-color: #446c5c;
+    border: 1px solid #446c5c;
+    position: absolute;
+    right: 1113px;
+}
+
+.PausarSom2 {
+    background-color: #446c5c;
+    border: 1px solid #446c5c;
+    position: absolute;
+    right: 860px;
+}
+
+.TocarSom3 {
+    background-color: #ac0b08;
+    border: 1px solid #ac0b08;
+    position: absolute;
+    left: 1061px;
+}
+
+.PausarSom3 {
+    background-color: #ac0b08;
+    border: 1px solid #ac0b08;
+    position: absolute;
+    right: 540px;
+}
+
+.Sun {
+    position: absolute;
+    left: 430px;
+    width: 300px;
+    height: 300px;
+    border: 5px solid #e21d92;
+    border-style: double;
+}
+
+.ThePerfectGirl {
+    position: absolute;
+    right: 855px;
+    width: 300px;
+    height: 300px;
+    border: 5px solid #446c5c;
+    border-style: double; 
+}
+
+.Custer {
+    position: absolute;
+    right: 540px;
+    width: 300px;
+    height: 300px;
+    border: 5px solid #ac0b08;
+    border-style: double; 
+}

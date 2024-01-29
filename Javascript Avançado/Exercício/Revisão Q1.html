@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revisão Q1</title>
+  <link rel="stylesheet" href="Revisão Q1.css">
+
+</head>
+<body>
+  <div class="Caixa"></div>
+
+  <label class= "Nome" for="nome">Nome</label>
+  <input class= "NomeInput" type="text" id="nome" placeholder="Digite seu nome">
+
+  <label class= "Sobrenome" for="sobrenome">Sobrenome</label>
+  <input class= "SobrenomeInput" type="text" id="sobrenome" placeholder="Digite seu sobrenome">
+
+  <button class= "Salvar" onclick="concatenarNomes()">Salvar</button>
+
+  <p class="NomeCompleto" for="nomeCompleto">Nome Completo</p>
+  <input class="NomeCompletoInput" type="text" id="nomeCompleto" placeholder="Seu nome completo será exibido aqui" readonly>
+
+  <script>
+    function concatenarNomes() {
+      var nome = document.getElementById('nome').value;
+      var sobrenome = document.getElementById('sobrenome').value;
+      var nomeCompleto = nome + ' ' + sobrenome;
+      document.getElementById('nomeCompleto').value = nomeCompleto;
+    }
+  </script>
+
+</body>
+</html>

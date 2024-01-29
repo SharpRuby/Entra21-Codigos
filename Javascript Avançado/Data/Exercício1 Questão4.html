@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício1 Questão4</title>
+</head>
+<body>
+    <h1>Calculadora de Diferença de Dias</h1>
+    <label>Data 1: <input type="date" id="date1"></label>
+    <label>Data 2: <input type="date" id="date2"></label>
+    <button onclick="calcularDiferenca()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularDiferenca() {
+            // Obter as datas dos campos de entrada
+            var data1 = new Date(document.getElementById("date1").value);
+            var data2 = new Date(document.getElementById("date2").value);
+
+            // Calcular a diferença em milissegundos
+            var diferencaEmMilissegundos = Math.abs(data1 - data2);
+
+            // Converter a diferença em dias
+            var diferencaEmDias = Math.floor(diferencaEmMilissegundos / (1000 * 60 * 60 * 24));
+
+            // Exibir o resultado no parágrafo
+            document.getElementById("resultado").textContent = "Diferença em dias: " + diferencaEmDias + " dias";
+        }
+    </script>
+</body>
+</html>

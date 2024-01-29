@@ -1,0 +1,59 @@
+body {
+    background: rgb(145,140,138);
+    background: linear-gradient(90deg, rgba(145,140,138,1) 10%, rgba(145,140,138,1) 90%);
+}
+
+::placeholder {
+    text-align: center;
+    }
+
+.Nome {
+    position: absolute;
+    left: 36%;
+    top: 8%;
+}
+
+.NomeInput {
+    border: 2px solid black; 
+    background-color: gainsboro;
+    position: absolute;
+    left: 620px;
+    top: 10%;
+}
+
+.Sobrenome {
+    position: absolute;
+    left: 52%;
+    top: 8%;
+}
+
+.SobrenomeInput {
+    border: 2px solid black; 
+    background-color: gainsboro;
+    position: absolute;
+    left: 940px;
+    top: 10%;
+}
+
+.Salvar {
+    border: 2px solid black; 
+    background-color: gainsboro;
+    position: absolute;
+    left: 44.2%;
+    top: 19%;
+}
+
+.NomeCompleto {
+    position: absolute;
+    left: 43%;
+    top: 12%;
+}
+
+.NomeCompletoInput {
+    border: 2px solid black; 
+    background-color: gainsboro;
+    position: absolute;
+    left: 39.2%;
+    top: 16%;
+    width: 230px;
+}

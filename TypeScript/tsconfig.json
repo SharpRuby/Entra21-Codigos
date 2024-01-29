@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "outDir": "Exercício API2",
+        "target": "ES6",
+        "module": "commonjs"
+    },
+    "include": ["Exercício API1/**/*.ts"]
+}

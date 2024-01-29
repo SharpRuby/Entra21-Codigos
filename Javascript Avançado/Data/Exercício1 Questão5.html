@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício1 Questão5</title>
+</head>
+<body>
+    <h1>Calculadora de Idade</h1>
+    <label>Digite sua data de nascimento:</label>
+    <input type="date" id="dataNascimento">
+    <button onclick="calcularIdade()">Calcular Idade</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularIdade() {
+            // Obter a data de nascimento do usuário a partir do input
+            var dataNascimento = document.getElementById("dataNascimento").value;
+
+            // Converter a data de nascimento em um objeto Date
+            var dataNascimentoDate = new Date(dataNascimento);
+
+            // Obter a data atual
+            var dataAtual = new Date();
+
+            // Calcular a diferença de anos entre a data atual e a data de nascimento
+            var diferencaAnos = dataAtual.getFullYear() - dataNascimentoDate.getFullYear();
+
+            // Verificar se o aniversário já ocorreu este ano
+            if (dataAtual.getMonth() < dataNascimentoDate.getMonth() || (dataAtual.getMonth() === dataNascimentoDate.getMonth() && dataAtual.getDate() < dataNascimentoDate.getDate())) {
+                diferencaAnos--;
+            }
+
+            // Exibir a idade no console
+            document.getElementById("resultado").textContent = "Sua idade é: " + diferencaAnos + " anos";
+        }
+    </script>
+</body>
+</html>

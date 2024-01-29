@@ -1,0 +1,17 @@
+.text-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* .posicaoImagem {
+    display: flex;
+    position: absolute;
+    top: 650px;
+    left: 600px;
+} */
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
+}

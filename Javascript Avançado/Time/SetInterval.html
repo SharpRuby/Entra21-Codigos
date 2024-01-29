@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Agendamento com SetInterval</h2>
+
+    <div id="contador"></div>
+
+    <script>
+        var contador = 0; 
+        function atualizarContador() {
+            var contadorDiv = document.getElementById('contador');
+            contadorDiv.innerHTML = 'Contagem ' + contador; 
+            contador++;   
+        }
+
+        var intervalID = setInterval(atualizarContador, 1000); 
+
+        setTimeout(function() {
+            clearInterval(intervalID);
+            document.getElementById('contador').innerHTML = 'Contagem finalizada!'
+        }, 5000); 
+
+    </script>
+    
+</body>
+</html>

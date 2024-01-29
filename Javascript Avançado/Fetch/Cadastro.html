@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Clientes</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+ 
+    h1 {
+      color: #333;
+    }
+ 
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+ 
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+ 
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+ 
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+ 
+  <body>
+    <h1>Cadastro de Clientes</h1>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" required /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" required /><br />
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" required /><br />
+    <button onclick="addClient()">Cadastrar</button>
+ 
+ 
+    <button onclick="redirectToListagem()">Ir para Listagem</button>
+ 
+    <script>
+      async function addClient() {
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const telefone = document.getElementById("telefone").value;
+ 
+        const response = await fetch("http://localhost:3000/clientes");
+        const data = await response.json();
+       
+        const newClient = {
+          id: data.length + 1,
+          nome: nome,
+          email: email,
+          telefone: telefone,
+        };
+ 
+        await fetch("http://localhost:3000/clientes", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newClient),
+        });
+ 
+        alert("Cliente cadastrado com sucesso!");
+ 
+       
+      }
+ 
+      function redirectToListagem() {
+          window.location.href = "Desafio.html";
+        }
+    </script>
+  </body>
+</html>

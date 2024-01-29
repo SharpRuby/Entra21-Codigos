@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+
+<body>
+    <div id="clicar" onclick="clicar()" style="background-color: aqua; width: 150px;">
+        Clique!
+    </div>
+
+    <div id="entrar" onmouseenter="entrar()" onmouseout="sair()" style="background-color: aqua; width: 150px;">
+        Entrar ?
+    </div>
+
+    <div id="fundo" onclick="clicarfundo()" onmouseout="sairfundo()" style="background-color: aqua; width: 150px;">
+        Cor do fundo
+    </div>
+    <script>
+        function clicar() {
+            var test0 = document.querySelector('#clicar');
+            test0.innerHTML = "Clicou!"
+        }
+
+        function entrar() {
+            var test1 = document.querySelector('#entrar');
+            test1.addEventListener('click', entrar)
+            test1.innerHTML = "Entrou!"
+        }
+
+        function sair() {
+            var test1 = document.querySelector('#entrar');
+            test1.innerHTML = "Saiu!"
+        }
+
+        function clicarfundo() {
+            var test2 = document.querySelector('#fundo');
+            test2.style.background = 'red';
+        }
+
+        function sairfundo() {
+            var test2 = document.querySelector('#fundo');
+            test2.style.background = 'aqua';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estética.css">
+    <title>Desafio Música</title>
+</head>
+
+<body>
+    <audio id="Audio1">
+        <source src="Sun.mp3" type="audio/mpeg">
+    </audio>
+    <h1 class="T1"> Sun </h1>
+
+    <audio id="Audio2">
+        <source src="The Perfect Girl.mp3" type="audio/mpeg">
+    </audio>
+    <h1 class="T2"> The Perfect Girl </h1>
+
+    <audio id="Audio3">
+        <source src="Custer.mp3" type="audio/mpeg">
+    </audio>
+    <h1 class="T3"> Custer </h1>
+
+    <p>
+        <img class="Sun" src="Sun.jpg" alt="Álbum Sun">
+        <img class="ThePerfectGirl" src="The Perfect Girl.jpg" alt="ÁLbum The Perfect Girl">
+        <img class="Custer" src="Custer.jpg" alt="ÁLbum Custer">
+
+        <button class="TocarSom1" onclick="TocarAudio1()" type="button">Tocar</button>
+        <button class="PausarSom1" onclick="PausarAudio1()" type="button">Pausar</button>
+        <button class="TocarSom2" onclick="TocarAudio2()" type="button">Tocar</button>
+        <button class="PausarSom2" onclick="PausarAudio2()" type="button">Pausar</button>
+        <button class="TocarSom3" onclick="TocarAudio3()" type="button">Tocar</button>
+        <button class="PausarSom3" onclick="PausarAudio3()" type="button">Pausar</button>
+
+</body>
+
+<script>
+    var som1 = document.getElementById("Audio1");
+    var som2 = document.getElementById("Audio2");
+    var som3 = document.getElementById("Audio3");
+
+    function TocarAudio1() {
+        som1.play();
+    }
+
+    function PausarAudio1() {
+        som1.pause();
+    }
+
+    function TocarAudio2() {
+        som2.play();
+    }
+
+    function PausarAudio2() {
+        som2.pause();
+    }
+
+    function TocarAudio3() {
+        som3.play();
+    }
+
+    function PausarAudio3() {
+        som3.pause();
+    }
+</script>
+
+</html>

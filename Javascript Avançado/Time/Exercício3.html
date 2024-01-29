@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Exercício2.js"></script>
+    <title>Exercício3</title>
+</head>
+
+<body>
+
+    <h1>Horário Digital</h1>
+    <p id="relogio"></p>
+
+    <script>
+    function atualizarRelogio() {
+        let relogioElement = document.getElementById('relogio');
+        let agora = new Date(); 
+        let tempoFormatado = `${agora}`; 
+        relogioElement.innerHTML = tempoFormatado; 
+        setTimeout(atualizarRelogio, 1000)
+    }
+
+    atualizarRelogio(); 
+
+    </script>
+
+</body>
+
+</html>
